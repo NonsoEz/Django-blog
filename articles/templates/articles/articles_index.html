@@ -4,16 +4,25 @@
 
 {% block content %}
 
-<h1>Articles</h1>
-<div class="articles">
+<h1>Latest Posts</h1>
+<div class="row">
     {% for article in articles %}
-    <div class="article">
-        <h2>
-            <a href="{% url 'articles:detail' slug=article.slug %}">{{ article.title }}</a>
-        </h2>
-        <p>{{ article.snippet }}</p>
-        <p>{{ article.date }}</p>
-        <p>{{ article.author }}</p>
+    <div class="col-md-4">
+        <div class="single-article">
+            <p class="blog-meta"> By {{ article.author }} <span>{{ article.date }}</span></p>
+            <h4>
+                <a href="{% url 'articles:detail' slug=article.slug %}">{{ article.title }}</a>
+            </h4>
+            <p class="blog-text">{{ article.snippet }}</p>
+            <p>
+                <a href="{% url 'articles:detail' slug=article.slug %}" class="read-more-btn">Read More</a>
+                <span>
+                <i class="fa fa-thumbs-o-up"> </i>10 People like, 
+                <i class="fa fa-comment-o"></i> 5...
+                </span>
+            </p>
+        </div>
+
     </div>
     {% endfor %}
 </div>

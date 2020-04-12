@@ -1,33 +1,336 @@
-body {
-    background-size: cover;
-    background-color: #0f121f;
-    background-image: url(/static/img/blog2.jpg);
-    background-repeat: no-repeat;
-    color: #fff !important;
-    height: 100%;
-}
-
-body * {
+* {
+    margin: 0;
+    padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+
+/****************************
+        STYLE HEADER
+*****************************/
+
+header {
+    background-image: url(/static/img/bg3.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-title h1 {
+    color: #ffffff;
+    font-size: 60px;
+    width: auto;
+}
+
+.header-title p {
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+}
+
+.header-btn {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-anchor {
+    border: 1px solid #ffffff;
+    padding: 10px 30px;
+    color: #ffffff;
+    text-decoration: none !important;
+    transition: 0.6s ease;
+}
+
+.header-anchor:hover {
+    color: #000;
+    background-color: #ffffff;
+}
+
+
+/****************************
+        STYLE NAV
+*****************************/
+
+.override-nav {
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ffffff !important;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    transition: 0.6s ease;
+    margin-left: 2px;
+}
+
+ul li.active a {
+    background-color: transparent;
+    color: #000000;
+}
+
+ul li a:hover {
+    background-color: #ffffff;
+    color: #000000 !important;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font: normal 26px 'Cookie', cursive;
+}
+
+.navbar-brand span {
+    color: #5383d3;
+}
+
+a.navbar-brand:hover {
+    color: #000;
+}
+
+
+/****************************
+    STYLE ARTICLE INDEX
+*****************************/
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.wrapper h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.single-article {
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-top: 30px;
+    background-image: #fff;
+}
+
+.single-article img {
+    width: 100%;
+}
+
+.blog-meta {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.single-article span {
+    max-width: 100%;
+    float: right;
+    font-size: 12px;
+    color: cornflowerblue;
+}
+
+.blog-text {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.single-article h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.single-article a {
+    text-decoration: none;
+}
+
+.read-more-btn {
+    background-image: linear-gradient(to right, #5c8bef, #1c03b5);
+    border: 1px solid #ffffff;
+    padding: 10px 30px;
+    color: #ffffff;
+    text-decoration: none !important;
+    transition: 0.6s ease;
+}
+
+.read-more-btn:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/*********************
+    STYLE FOOTER
+**********************/
+
+footer {
+    bottom: 0;
+}
+
+.footer-distributed {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: #5383d3;
+}
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
     font-weight: normal;
     margin: 0;
 }
 
-a,
-a:hover,
-a:visited {
-    color: #fff !important;
-    text-decoration: none !important;
+.footer-distributed .footer-center {
+    width: 35%;
 }
 
-.img-responsive {
-    max-width: 100% !important;
-    height: auto !important;
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #5383d3;
+    text-decoration: none;
+    ;
+}
+
+.footer-distributed .footer-right {
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+    .main {
+        line-height: normal;
+        font-size: auto;
+    }
 }
